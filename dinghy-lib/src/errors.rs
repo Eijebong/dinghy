@@ -3,12 +3,13 @@ error_chain! {
         Io(::std::io::Error);
         StringFromUtf8(::std::string::FromUtf8Error);
         PathStripPrefix(::std::path::StripPrefixError);
-        Cargo(::cargo::CargoError);
+        CargoMetadata(::cargo_metadata::Error);
         Plist(::plist::Error);
         Regex(::regex::Error);
         Json(::json::Error);
         Ignore(::ignore::Error);
         Toml(::toml::de::Error);
+        SerdeJson(::serde_json::Error);
     }
 
     errors {
